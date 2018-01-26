@@ -1,0 +1,11 @@
+
+    <mat-toolbar>
+        <ul>
+            <li [style.color]= "appService.selectedMenu == 'LegalNotice' ? 'red' : 'black'" 
+                (click) = "selectMenu('LegalNotice')">Legal notice</li>
+            <li [style.color]= "appService.selectedMenu == 'Credits' ? 'red' : 'black'" 
+                (click) = "selectMenu('Credits')">Crédits</li>
+        </ul>
+    </mat-toolbar>
+      
+    

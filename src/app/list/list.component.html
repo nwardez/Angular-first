@@ -1,0 +1,16 @@
+<hr color="blue">
+<h2>Liste des TODOS</h2>
+<hr color="blue">
+
+<div *ngFor="let todo of todoService.listTodo" position="absolute">
+  <h4>numéro: {{todo.id}}  Todo: {{todo.name}}</h4>
+  <label id="supp" (click)="todoService.supprimerTodo(todo)">Supprimer</label>
+  <label id="edit" (click)="todoService.editerTodo(todo)">Editer</label>
+
+  <input *ngIf="todo.editable" 
+  (change)="todoService.changer(todo,inputText.value)" 
+  type="text" placeholder="Modifier la TODO"  #inputText>
+
+</div>
+
+
